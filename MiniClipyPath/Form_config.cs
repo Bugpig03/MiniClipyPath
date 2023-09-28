@@ -56,8 +56,8 @@ namespace MiniClipyPath
                     // La clé spécifiée n'existe pas dans la configuration
                     Console.WriteLine("key doesnt exist");
                 }
-            }
             MainForm.initButtonName();
+            }
             Close();
 
         }
