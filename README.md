@@ -2,7 +2,7 @@
 
 # MINI CLIPY PATH
 
-MiniClipyPath is a very simple software that allows you to have shortcuts to open the Windows File Explorer with a single click.
+MiniClipyPath is a small software that allows you to open your Windows File Explorer with custom paths.
 
 ## Version
 - alpha 1.1.0
@@ -13,10 +13,12 @@ MiniClipyPath is a very simple software that allows you to have shortcuts to ope
 
 ## Screenshots
 
-Simple interface :
+Simple interface :                                      
+
 ![App Screenshot](https://i.ibb.co/3YZ8gbh/miniclipypath-img1.png)
 
-Customizable :
+Customizable :                                                
+
 ![App Screenshot](https://i.ibb.co/1XK8KV0/miniclipypath-img2.png)
 
 ## Authors
