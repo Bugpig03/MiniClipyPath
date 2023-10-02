@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_config));
             label_title = new Label();
             textBox_name = new TextBox();
             label_custom_name = new Label();
@@ -50,9 +51,9 @@
             // textBox_name
             // 
             textBox_name.Location = new Point(12, 82);
-            textBox_name.MaxLength = 19;
+            textBox_name.MaxLength = 21;
             textBox_name.Name = "textBox_name";
-            textBox_name.Size = new Size(173, 27);
+            textBox_name.Size = new Size(183, 27);
             textBox_name.TabIndex = 1;
             // 
             // label_custom_name
@@ -112,6 +113,7 @@
             Controls.Add(label_custom_name);
             Controls.Add(textBox_name);
             Controls.Add(label_title);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(800, 300);
             MinimumSize = new Size(800, 300);
             Name = "Form_config";

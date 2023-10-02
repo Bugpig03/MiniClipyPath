@@ -29,10 +29,11 @@ namespace MiniClipyPath
             if (MainForm != null)
             {
                 int Index = MainForm.currentIndex;
+                int pageIndex = MainForm.pageIndex;
                 string newName = textBox_name.Text;
                 string newPath = textBox_path.Text;
-                string keyName = "button" + Index + "Name";
-                string keyPath = "button" + Index + "Path";
+                string keyName = "page" + pageIndex + "Button" + Index + "Name";
+                string keyPath = "page" + pageIndex + "Button" + Index + "Path";
 
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
@@ -56,7 +57,7 @@ namespace MiniClipyPath
                     // La clé spécifiée n'existe pas dans la configuration
                     Console.WriteLine("key doesnt exist");
                 }
-            MainForm.initButtonName();
+                MainForm.initButtonName();
             }
             Close();
 

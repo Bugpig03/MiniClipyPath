@@ -10,6 +10,7 @@ namespace MiniClipyPath
     public partial class MainForm : Form
     {
         public int currentIndex;
+        public int pageIndex = 1;
         public MainForm()
         {
             InitializeComponent();
@@ -17,7 +18,7 @@ namespace MiniClipyPath
 
         private void openpath(int index)
         {
-            string key = "button" + index + "Path";
+            string key = "page" + pageIndex + "Button" + index + "Path";
             string path = ConfigurationManager.AppSettings[key];
             if (Directory.Exists(path))
             {
@@ -31,8 +32,8 @@ namespace MiniClipyPath
 
         private void ShowConfigForm()
         {
-            string key_name = "button" + currentIndex + "Name";
-            string key_path = "button" + currentIndex + "Path";
+            string key_name = "page" + pageIndex + "Button" + currentIndex + "Name";
+            string key_path = "page" + pageIndex + "Button" + currentIndex + "Path";
             string name = ConfigurationManager.AppSettings[key_name];
             string path = ConfigurationManager.AppSettings[key_path];
             // Créez une nouvelle instance du formulaire Form_config
@@ -49,20 +50,18 @@ namespace MiniClipyPath
 
         public void initButtonName()
         {
-            button1.Text = ConfigurationManager.AppSettings["button1Name"];
-            button2.Text = ConfigurationManager.AppSettings["button2Name"];
-            button3.Text = ConfigurationManager.AppSettings["button3Name"];
-            button4.Text = ConfigurationManager.AppSettings["button4Name"];
-            button5.Text = ConfigurationManager.AppSettings["button5Name"];
-            button6.Text = ConfigurationManager.AppSettings["button6Name"];
-            button7.Text = ConfigurationManager.AppSettings["button7Name"];
-            button8.Text = ConfigurationManager.AppSettings["button8Name"];
-            button9.Text = ConfigurationManager.AppSettings["button9Name"];
-            button10.Text = ConfigurationManager.AppSettings["button10Name"];
-            button11.Text = ConfigurationManager.AppSettings["button11Name"];
-            button12.Text = ConfigurationManager.AppSettings["button12Name"];
-            button13.Text = ConfigurationManager.AppSettings["button13Name"];
-            button14.Text = ConfigurationManager.AppSettings["button14Name"];
+            for (int i = 0; i <= 14; i++)
+            {
+                string buttonName = "button" + i;
+
+                var buttonField = this.GetType().GetField(buttonName, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+                if (buttonField != null && buttonField.FieldType == typeof(Button))
+                {
+                    Button button = (Button)buttonField.GetValue(this);
+                    string key = "page" + pageIndex + "Button" + i + "Name";
+                    button.Text = ConfigurationManager.AppSettings[key];
+                }
+            }
             this.Invalidate();
         }
 
@@ -262,6 +261,42 @@ namespace MiniClipyPath
                 currentIndex = 14;
                 contextMenuStrip_left_click.Show(button14, e.Location);
             }
+        }
+
+        private void buttonPage1_Click(object sender, EventArgs e)
+        {
+            pageIndex = 1;
+            initButtonName();
+        }
+
+        private void buttonPage2_Click(object sender, EventArgs e)
+        {
+            pageIndex = 2;
+            initButtonName();
+        }
+
+        private void buttonPage3_Click(object sender, EventArgs e)
+        {
+            pageIndex = 3;
+            initButtonName();
+        }
+
+        private void buttonPage4_Click(object sender, EventArgs e)
+        {
+            pageIndex = 4;
+            initButtonName();
+        }
+
+        private void buttonPage5_Click(object sender, EventArgs e)
+        {
+            pageIndex = 5;
+            initButtonName();
+        }
+
+        private void buttonPage6_Click(object sender, EventArgs e)
+        {
+            pageIndex = 6;
+            initButtonName();
         }
     }
 }
