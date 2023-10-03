@@ -83,9 +83,9 @@
             // 
             // button_save
             // 
-            button_save.Location = new Point(676, 212);
+            button_save.Location = new Point(676, 202);
             button_save.Name = "button_save";
-            button_save.Size = new Size(94, 29);
+            button_save.Size = new Size(94, 39);
             button_save.TabIndex = 5;
             button_save.Text = "save";
             button_save.UseVisualStyleBackColor = true;
@@ -93,9 +93,9 @@
             // 
             // button_cancel
             // 
-            button_cancel.Location = new Point(576, 212);
+            button_cancel.Location = new Point(576, 202);
             button_cancel.Name = "button_cancel";
-            button_cancel.Size = new Size(94, 29);
+            button_cancel.Size = new Size(94, 39);
             button_cancel.TabIndex = 6;
             button_cancel.Text = "cancel";
             button_cancel.UseVisualStyleBackColor = true;
