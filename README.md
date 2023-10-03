@@ -5,7 +5,7 @@
 MiniClipyPath is a small software that allows you to open your Windows File Explorer with custom paths.
 
 ## Version
-- alpha 1.2.0 (add 6 pages system)
+- alpha 1.2.1 (fix for page 3 (btn 7 and 13)
 
 ## Screenshots
 
