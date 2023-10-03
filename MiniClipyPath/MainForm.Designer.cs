@@ -230,7 +230,7 @@
             label_version.Name = "label_version";
             label_version.Size = new Size(86, 19);
             label_version.TabIndex = 16;
-            label_version.Text = "alpha v.1.2.0";
+            label_version.Text = "alpha v.1.2.1";
             // 
             // contextMenuStrip_left_click
             // 
